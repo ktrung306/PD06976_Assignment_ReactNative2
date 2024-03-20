@@ -1,9 +1,9 @@
 import React from 'react';
 import {View, Text, Touchable, TouchableOpacity, Image, StyleSheet} from 'react-native';
-import { darkGreen } from '../Home/Constants';
+import { darkGreen } from '../Splash/Constants';
 import Seperator from '../../components/Seperator';
 import Input from '../../components/TextInput';
-import Button from '../Home/Button';
+import Button from '../Splash/Button';
 
 const Login = (props) => {
   return (
@@ -18,11 +18,11 @@ const Login = (props) => {
           <View style={styles.container3}>
           <Text style={styles.text3}>Forgot Password ?</Text>
           </View>
-          <Button textColor='white' bgColor={darkGreen} btnLabel="Đăng nhập" Press={() => alert("Logged In")} />
+          <Button textColor='white' bgColor={darkGreen} btnLabel="Đăng nhập" Press={() => props.navigation.navigate("Tabs")} />
           <Seperator text="Hoặc"></Seperator>
           <View style={styles.container4}>
             <Text style={styles.text4}>Bạn không có tài khoản? </Text>
-            <TouchableOpacity onPress={() => props.navigation.navigate("Signup")}>
+            <TouchableOpacity onPress={() => props.navigation.navigate('Signup')}>
             <Text style={styles.text5}>Signup</Text>
             </TouchableOpacity>
           </View>

@@ -1,11 +1,11 @@
 import React from 'react';
 import {View, Text, Touchable, TouchableOpacity, Image, StyleSheet} from 'react-native';
-import { darkGreen } from '../Home/Constants';
+import { darkGreen } from '../Splash/Constants';
 import Seperator from '../../components/Seperator';
 import Input from '../../components/TextInput';
-import Button from '../Home/Button';
+import Button from '../Splash/Button';
 
-const Signup = props => {
+const Signup = (props) => {
   return (
       <View style={styles.container}>
         <Image source={require('../../assets/splash.png')} style={styles.image}></Image>
@@ -14,8 +14,8 @@ const Signup = props => {
           <Text style={styles.text}>Tạo tài khoản</Text>
           <Input placeholder="Họ tên"/>
           <Input placeholder="Email" keyboardType={'email-address'}/>
-          <Input placeholder="Số điện thoại" keyboardType={'number'}/>
-          <Input placeholder="Mật khẩu" secureTextEntry={true}/>
+          <Input placeholder="Số điện thoại" keyboardType={'phone-pad'}/>
+          <Input placeholder="Mật khẩu"/>
           <View style={styles.container3}>
             <Text style={styles.text2}>Để đăng kí tài khoản, bạn đồng ý{' '}</Text>
             <Text style={styles.text3}>Terms & Conditions</Text>
@@ -25,8 +25,7 @@ const Signup = props => {
             <Text style={styles.text4}>and {" "}</Text>
             <Text style={styles.text5}>Privacy Policy</Text>
           </View>
-          <Button textColor="white" bgColor={darkGreen} btnLabel="Đăng ký" Press={() => { alert('Accoutn created');
-              props.navigation.navigate('Login');}}/>
+          <Button textColor="white" bgColor={darkGreen} btnLabel="Đăng ký" Press={() => props.navigation.navigate('Login')}/>
           <Seperator text="Hoặc"></Seperator>
           <View
             style={styles.container5}>

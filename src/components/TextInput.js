@@ -1,6 +1,6 @@
 import React from 'react';
 import {TextInput} from 'react-native';
-import { darkGreen } from '../screens/Home/Constants';
+import { darkGreen } from '../screens/Splash/Constants';
 
 
 const Input = props => {

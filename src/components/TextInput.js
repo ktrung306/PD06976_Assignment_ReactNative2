@@ -3,7 +3,7 @@ import {TextInput} from 'react-native';
 import { darkGreen } from '../screens/Home/Constants';
 
 
-const Field = props => {
+const Input = props => {
   return (
     <TextInput
       {...props}
@@ -11,4 +11,4 @@ const Field = props => {
   );
 };
 
-export default Field;
+export default Input;
